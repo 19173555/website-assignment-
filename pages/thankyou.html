@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #3498db;
+    }
+
+
+    
+    .confetti {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #f00;
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Thank You for Your Donation!</h2>
+    <p>We appreciate your generosity. Your contribution will make a difference.</p>
+  </div>
+
+
+
+<script>
+
+function createConfetti() {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+    document.body.appendChild(confetti);
+    setTimeout(() => {
+        confetti.remove();
+    }, 2000);
+}
+
+const confettiInterval = setInterval(createConfetti, 100);
+
+// Stop creating confetti after 5 seconds
+setTimeout(() => {
+    clearInterval(confettiInterval);
+}, 5000);
+
+</script>
+
+
+
+
+</body>
+</html>

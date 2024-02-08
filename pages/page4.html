@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <style>
+        body{
+            background-image: url(../images/about\ os.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        p{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+color:  rgb(249, 249, 249);
+text-align: center;}
+.rectangle{
+  margin-top: 150px;
+  background-color: rgb(88, 63, 216);
+
+}
+.input-field {
+    flex-grow: 1;
+  width: 200px;
+  height: 100%;
+  padding: 5px;
+  margin-left: -50px;
+  padding-right: 90px;
+  border-radius: 10px
+}
+
+.input-container {
+  width: 300px;
+  height: 40px;
+  border: 1px ;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  position: fixed;
+  top:auto;
+  right: 10px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  height: 100%;
+  width: 80px;
+  margin-top: 8px;
+  background-color: #020000a8;
+  color: rgb(255, 255, 255);
+  border:none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  h1{
+    font-size:20px;
+  }
+        
+        h4{
+            font-size: 2.5vw;
+        }
+        .pp{font-size: 10px;}
+        .rectangle{
+           margin-top: 200px;}
+
+        }
+
+    </style>
+   <script>
+    function subscribeNewsletter() {
+  var email = document.getElementById("email").value;
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (emailRegex.test(email)) {
+    alert("Congrats, you are added to our newsletter");
+    document.getElementById("email").value = "";
+  } else {
+    alert("Please enter a valid email address");
+  }
+}
+
+    </script> 
+</head>
+
+<body>
+    <nav>
+        <ul>
+      <li> <a href="../index.html">      <h4> Home  </h4>    </a>   </li>
+         <li><a href="page2.html">  <h4> Programs   </h4>    </a></li>   
+         <li><a href="page4.html">  <h4> About Us   </h4>          </a>    </li> 
+         <li><a href="page5.html">   <h4> Contact Us </h4>        </a>    </li> 
+         <li><a href="page3.html">  <h4> Donations   </h4>       </a> </li>   
+        
+         
+         </ul>
+ </nav>
+
+ <h1>
+We are Humane Society
+ </h1><br>
+<p class="pp" style="margin-top: 100px;">Welcome to Humane Society, where compassion meets action.<br>
+     We are a dedicated team of individuals committed to making a positive impact on the world.<br>
+      With a shared belief in the power of kindness, we strive to create meaningful change in the lives of those in need.<br>
+       Through unwavering dedication and community support, we aim to tackle pressing issues and build a brighter, more inclusive future.<br>
+        Join us on this journey of philanthropy, where every contribution, no matter how small, becomes a catalyst for transformation.<br>
+         Together, we can make a difference that resonates far beyond today.<br></p>
+
+<br><br><br><br><br><br><br><br><br>
+         <div class="rectangle" style="display:grid;">
+
+            
+   <p style="text-align: left;">
+            Subscriber to our Newsletter!!!
+   </p>
+
+   <div class="input-container">
+    <input type="email" id="email" class="input-field" placeholder="Your email here">
+    <button class="submit-button" onclick="subscribeNewsletter()">Submit</button>
+  </div>
+
+
+         </div>
+
+
+
+         
+
+
+
+
+</body>
+</html>
